@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "identity_backend": {
+      "main": "src/identity_backend/main.mo",
+      "type": "motoko"
+    },
+    "identity_frontend": {
+      "dependencies": [
+        "identity_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/identity_frontend/src/index.html"
+      },
+      "source": [
+        "src/identity_frontend/assets",
+        "dist/identity_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
