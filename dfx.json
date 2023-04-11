@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "bunny_dbank_backend": {
+      "main": "src/bunny_dbank_backend/main.mo",
+      "type": "motoko"
+    },
+    "bunny_dbank_frontend": {
+      "dependencies": [
+        "bunny_dbank_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/bunny_dbank_frontend/src/index.html"
+      },
+      "source": [
+        "src/bunny_dbank_frontend/assets",
+        "dist/bunny_dbank_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
