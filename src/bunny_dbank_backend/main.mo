@@ -4,7 +4,9 @@ import Float "mo:base/Float";
 
 actor DBank {
   stable var currentAmount: Float = 300;
+  // currentAmount := 300;
   stable var startTime = Time.now();
+  // startTime := Time.now();
 
   public func getCurrentTime() {
     Debug.print(debug_show(Time.now()))
